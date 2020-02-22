@@ -87,8 +87,12 @@ function BasicLayout(props) {
   
   return (
     <div className={styles.normal}>
-      <Header {...props}/>
-      {props.children}
+      <div style={{position:"fixed",width:"100%", top:0,zIndex:1}}>
+        <Header/>
+      </div>
+      <div style={{marginTop:40}}>
+        {props.children}
+      </div>
     </div>
   );
 }
